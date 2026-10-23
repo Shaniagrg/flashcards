@@ -1,6 +1,10 @@
 // to use express we must add it using NODES require statement
 const express = require('express');  //lets store this in a variable
 
+//sTEP 4 INSTALL ppug then connect
+//set "view engine" to parameter "pug using app.set"
+app.set('view engine', 'pug'); //her app.set just tells Epress whcih template to use
+
 //express function returns EXPRESS APPLICATION
 const app = express();  // store it in an variable
 
@@ -9,6 +13,7 @@ app.get('/', (req, res) => {
     res.send('<h1>I love Treehouse!</h1>') //response's send method sends a string to the client
 });
 
+//step 3 create another route
 app.get('/home', (req, res) => {
     res.send('<h1>Hello, JS Developers</h1>') //when user type URL localhost:3000/home this string will show
 });
