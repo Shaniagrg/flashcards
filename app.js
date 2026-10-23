@@ -1,16 +1,17 @@
 // to use express we must add it using NODES require statement
 const express = require('express');  //lets store this in a variable
 
+//express function returns EXPRESS APPLICATION
+const app = express();  // store it in an variable
+
 //sTEP 4 INSTALL ppug then connect
 //set "view engine" to parameter "pug using app.set"
 app.set('view engine', 'pug'); //her app.set just tells Epress whcih template to use
 
-//express function returns EXPRESS APPLICATION
-const app = express();  // store it in an variable
-
 // step 2 Use GET. This is the route to follow if a visitor just visits our site without specifiying a particular folder or file
 app.get('/', (req, res) => {
-    res.send('<h1>I love Treehouse!</h1>') //response's send method sends a string to the client
+    //res.render('<h1>I love Treehouse!</h1>') //response's send method sends a string to the client
+    res.render('index') //since we created pug and now you simply place the file name and chaneg to 'render' from 'send'
 });
 
 //step 3 create another route
