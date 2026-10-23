@@ -8,8 +8,15 @@ const app = express();  // store it in an variable
 app.get('/', (req, res) => {
     res.send('<h1>I love Treehouse!</h1>') //response's send method sends a string to the client
 });
+
+app.get('/home', (req, res) => {
+    res.send('<h1>Hello, JS Developers</h1>') //when user type URL localhost:3000/home this string will show
+});
+
 //set up DEVELOPMENT server using listen method
-app.listen(3000);  //give port number
+app.listen(3000, () => {
+    console.log('The application is running on localhose:3000!')
+});  //give port number
 
 //--------- now we have an EXPRESS app ---------------
 
